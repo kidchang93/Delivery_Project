@@ -6,7 +6,7 @@ DROP TABLE  if exists company;
 DROP TABLE  if exists parcel;
 DROP TABLE  if exists user_address;
 DROP TABLE  if exists sigugun;
-
+dddd
 
 CREATE TABLE `user` (
 	user_id VARCHAR(15) NOT NULL PRIMARY KEY COMMENT '회원 ID',
