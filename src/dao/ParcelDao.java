@@ -6,6 +6,7 @@ import java.sql.ResultSet;
 import java.util.ArrayList;
 import java.util.List;
 
+// Parcel 클래스 호출
 import model.Parcel;
 
 public class ParcelDao {
@@ -14,12 +15,12 @@ public class ParcelDao {
 
 	}
 
-	public List<Parcel> selectAll() {
+	public List<Parcel> selectAll() {							// 값을 계속 추가할 수 있는 List 클래스 선언
 
-		List<Parcel> list = new ArrayList<>();
+		List<Parcel> list = new ArrayList<>();					// list 라는 인스턴스 생성
 
 		try {
-			Connection conn = SuperDao.getConnection();
+			Connection conn = SuperDao.getConnection();			// JDBC 연결
 			String sql = "select * from parcel";
 			System.out.println(sql);
 
