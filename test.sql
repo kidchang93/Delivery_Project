@@ -74,7 +74,7 @@ load data local infile 'D:/lck_data/Delivery_Project/data3.txt' into table sigug
 
 -- 경로 오류가 아니라 세팅의 오류(error code 2068)라면
 -- 터미널에서 local_infile 설정해줘야함
--- mysql none 상태에서 set global variables like 'local_infile';
+-- mysql none 상태에서 show global variables like 'local_infile';
 -- off 상태면 set global local_infile=1;
 -- set global variables like 'local_infile'; 다시 실행하면 on 으로 바뀜
 -- 그 다음에 use delivery; 한 다음 위에 경로 지정된 명령문 세팅하면 query ok 라고 뜸
