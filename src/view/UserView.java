@@ -245,7 +245,7 @@ public class UserView implements CommonView{
 
 			User user = new User();
 			
-			System.out.println(userid + " " +username + " " +useraddr + " " );
+			System.out.println("입력 정보 확인 : " +userid + " " +username + " " +useraddr + " " );
 			
 			user.setUserId(userid);
 			user.setUserPwd(userpw);

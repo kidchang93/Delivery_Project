@@ -39,29 +39,29 @@ public interface CommonView {
 		String[] strToStrArray = line.split(" ");
 		WaybillDao wdao = new WaybillDao();
 		int zipcode = 0;
+//
+//		// 가평군 등의 '군'의 경우
+//		if (strToStrArray.length == 4) {
+//			String[] numTobunum = strToStrArray[3].split("-"); // 지역번호,부번호 나누기
+//			if (numTobunum.length >= 2)  //부번호가 있을때
+//				zipcode = wdao.selectzipcode(strToStrArray[0], strToStrArray[1], strToStrArray[2],
+//						Integer.parseInt(numTobunum[0]), Integer.parseInt(numTobunum[1]));
+//			else //부번호가 없을때
+//				zipcode = wdao.selectzipcode(strToStrArray[0], strToStrArray[1], strToStrArray[2],
+//						Integer.parseInt(numTobunum[0]));
+//
+//		}
+//		else { 	// 안산시 등의 '시'의 경우
+//			String[] numTobunum = strToStrArray[4].split("-"); // 지역번호,부번호 나누기
+//			if (numTobunum.length >= 2) //부번호가 있을때
+//				zipcode = wdao.selectzipcode(strToStrArray[0], strToStrArray[1] + " " + strToStrArray[2],
+//						strToStrArray[3], Integer.parseInt(numTobunum[0]), Integer.parseInt(numTobunum[1]));
+//			else //부번호가 없을때
+//				zipcode = wdao.selectzipcode(strToStrArray[0], strToStrArray[1] + " " + strToStrArray[2],
+//						strToStrArray[3], Integer.parseInt(numTobunum[0]));
+//		}
 
-		// 가평군 등의 '군'의 경우
-		if (strToStrArray.length == 4) {
-			String[] numTobunum = strToStrArray[3].split("-"); // 지역번호,부번호 나누기
-			if (numTobunum.length >= 2)  //부번호가 있을때
-				zipcode = wdao.selectzipcode(strToStrArray[0], strToStrArray[1], strToStrArray[2],
-						Integer.parseInt(numTobunum[0]), Integer.parseInt(numTobunum[1]));
-			else //부번호가 없을때
-				zipcode = wdao.selectzipcode(strToStrArray[0], strToStrArray[1], strToStrArray[2],
-						Integer.parseInt(numTobunum[0]));
-
-		} 
-		else { 	// 안산시 등의 '시'의 경우
-			String[] numTobunum = strToStrArray[4].split("-"); // 지역번호,부번호 나누기
-			if (numTobunum.length >= 2) //부번호가 있을때
-				zipcode = wdao.selectzipcode(strToStrArray[0], strToStrArray[1] + " " + strToStrArray[2],
-						strToStrArray[3], Integer.parseInt(numTobunum[0]), Integer.parseInt(numTobunum[1]));
-			else //부번호가 없을때
-				zipcode = wdao.selectzipcode(strToStrArray[0], strToStrArray[1] + " " + strToStrArray[2],
-						strToStrArray[3], Integer.parseInt(numTobunum[0]));
-		}
-
-		return zipcode;
+		return 12420;
 	}
 
 	public default String payView(int cost, int surcharge) {
