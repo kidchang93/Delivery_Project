@@ -59,7 +59,7 @@ public class ParcelinfoView implements CommonView {
 				// 택배 규격 확인
 
 				while (true) {
-					
+					// 택배의 크기 - 패키지 번호 입력 ( 스위치 문으로 변경하고 패키지에 가격 적어주기 )
 					System.out.println();
 					System.out.println("택배의 크기를 입력해 주세요.");
 					System.out.println();
